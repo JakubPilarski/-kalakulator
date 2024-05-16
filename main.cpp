@@ -1,12 +1,13 @@
 #include <iostream>
-
+#include <math.h>
 void menu(void) {
     printf("\n");
     printf("1 - Add\n");
     printf("2 - Subtract\n");
     printf("3 - Multiply\n");
     printf("4 - Divide\n");
-    printf("5 - Stop Program\n");
+    printf("5 - Incitement\n");
+    printf("6 - Stop Program\n");
     printf("Select an option:\n");
 }
 int main() {
@@ -62,12 +63,19 @@ int main() {
                     {
                         printf("%f / %f = wrong\n try again\n", number3, number4);
                     }
-
+                break;
+            case 5:
+                printf("Base number:");
+                scanf("%d", &number1);
+                printf("Exponent number:");
+                scanf("%d", &number2);
+                result = pow(number1,number2);
+                printf("%d ^ %d = %d\n", number1, number2, result);
                 break;
             default:
                 printf("Choose the right option\n\n");
         }
-    } while (option != 5);
+    } while (option != 6);
 
     return 0;
 }
