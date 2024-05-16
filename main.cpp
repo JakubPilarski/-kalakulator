@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+
 void menu(void) {
     printf("\n");
     printf("1 - Add\n");
@@ -7,7 +8,8 @@ void menu(void) {
     printf("3 - Multiply\n");
     printf("4 - Divide\n");
     printf("5 - Incitement\n");
-    printf("6 - Stop Program\n");
+    printf("6 - Square Root\n");
+    printf("7 - Stop Program\n");
     printf("Select an option:\n");
 }
 int main() {
@@ -72,10 +74,16 @@ int main() {
                 result = pow(number1,number2);
                 printf("%d ^ %d = %d\n", number1, number2, result);
                 break;
+            case 6 :
+                printf("Number:");
+                scanf("%f", &number3);
+                resultd = sqrt(number3);
+                printf("v/%f = %f\n", number3, resultd);
+                break;
             default:
                 printf("Choose the right option\n\n");
         }
-    } while (option != 6);
+    } while (option != 7);
 
     return 0;
 }
